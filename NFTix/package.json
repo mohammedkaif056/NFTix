@@ -1,0 +1,33 @@
+{
+  "name": "hardhat-nft-ticketing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --check */*.js \"*/**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "prettier --write */*.js \"*/**/*.{js,jsx,ts,tsx}\"",
+    "lint-sol": "prettier --check --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
+    "lint-sol:fix": "prettier --write --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
+    "lint-solhint": "solhint 'contracts/**/*.sol'",
+    "lint-solhint:fix": "solhint 'contracts/**/*.sol' --fix",
+    "lint-all": "npm run lint-sol:fix && npm run lint:fix",
+    "deploy": "deploy.bat"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.16",
+    "prettier": "^3.3.2",
+    "prettier-plugin-solidity": "^1.4.0",
+    "solhint": "^5.0.3",
+    "solhint-plugin-prettier": "^0.1.0"
+  },
+  "dependencies": {
+    "@types/yargs": "^17.0.33",
+    "dotenv": "^16.4.5",
+    "yargs": "^17.7.2"
+  }
+}
